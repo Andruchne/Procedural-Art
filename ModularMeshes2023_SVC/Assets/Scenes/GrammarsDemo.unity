@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildDelay: 0.1
   prefab: {fileID: -927199367670048503, guid: 07320f43aa78db04883b2055ead1d2fa, type: 3}
-  HeightRemaining: 10
+  HeightRemaining: 4
 --- !u!4 &1097731010
 Transform:
   m_ObjectHideFlags: 0

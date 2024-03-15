@@ -21,31 +21,93 @@ namespace Demo {
 			if (HeightRemaining>0) {
 				Stack newStack = null;
 
+                /**
+				// Image 1:
+				newStack = CreateSymbol<Stack>("stack", new Vector3(0, 1, 0));
+				newStack.Initialize(prefab, HeightRemaining-1);
+				newStack.transform.localRotation = Quaternion.Euler(0, 0, 15);
+				newStack.Generate(buildDelay); 
 				/**/
+
+                /**
+                // Image 2:
+                newStack = CreateSymbol<Stack>("stack", new Vector3(0, 1, 0));
+				newStack.Initialize(prefab, HeightRemaining-1);
+				newStack.transform.localRotation = Quaternion.Euler(0, 15, 0);
+				newStack.Generate(buildDelay); 
+				/**/
+
+                /**
+                // Image 3:
+                if (HeightRemaining > 8)
+                {
+                    HeightRemaining = 8;
+                }
+
+				int zRotation = 45;
+				int yRotation = 45;
+                for (float i = 0; i < 1;)
+                {
+                    newStack = CreateSymbol<Stack>("stack", new Vector3(i - 0.25f, 1.25f, 0));
+                    newStack.Initialize(prefab, HeightRemaining - 1);
+                    newStack.transform.localRotation = Quaternion.Euler(0, 0, zRotation);
+                    newStack.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
+                    newStack.Generate(buildDelay);
+					zRotation = zRotation * -1;
+					i += 0.5f;
+                }
+                /**/
+
+                /**/
+                // Image 4:
+                if (HeightRemaining > 8)
+                {
+                    HeightRemaining = 8;
+                }
+
+                int zRotation = 45;
+                int yRotation = 45;
+                for (float i = 0; i < 1;)
+                {
+                    newStack = CreateSymbol<Stack>("stack", new Vector3(i - 0.25f, 1.25f, 0));
+                    newStack.Initialize(prefab, HeightRemaining - 1);
+                    if (HeightRemaining % 2 == 0) newStack.transform.localRotation = Quaternion.Euler(0, 0, zRotation);
+                    else newStack.transform.localRotation = Quaternion.Euler(0, yRotation, zRotation);
+                    newStack.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
+                    newStack.Generate(buildDelay);
+                    zRotation = zRotation * -1;
+                    i += 0.5f;
+                }
+                /**/
+
+                /**
 				// Simple stack:
 				// Spawn a smaller stack on top of this:
 				newStack = CreateSymbol<Stack>("stack", new Vector3(0, 1, 0));
 				newStack.Initialize(prefab, HeightRemaining-1);
 				// Generate it with a short delay (when in play mode):
 				newStack.Generate(buildDelay);
+				/**/
 
-				/**
+                /**
 				// Scaling:
 				// Every new stack gets a bit smaller:
 				newStack = CreateSymbol<Stack>("stack", new Vector3(0, 1, 0));
 				newStack.Initialize(prefab, HeightRemaining-1);
 				newStack.transform.localScale=new Vector3(0.9f, 0.9f, 0.9f);
 				newStack.Generate(buildDelay); 
+				/**/
 
-				/**
+                /**
 				// Rotation:
 				// Every new stack rotates by 30 degrees around the y-axis:
 				newStack = CreateSymbol<Stack>("stack", new Vector3(0, 1, 0));
 				newStack.Initialize(prefab, HeightRemaining-1);
 				newStack.transform.localRotation = Quaternion.Euler(0, 30, 0);
 				newStack.Generate(buildDelay); 
+				/**/
 
-				/**
+                /**
 				// Rotation & scaling:
 				// Every new stack rotates by 45 degrees around the z-axis, and becomes a bit smaller:
 				newStack = CreateSymbol<Stack>("stack", new Vector3(-0.25f, 1.25f, 0));
@@ -68,7 +130,7 @@ namespace Demo {
 					newStack.Generate(buildDelay);
 				}
 				/**/
-			}
-		}
+            }
+        }
 	}
 }
