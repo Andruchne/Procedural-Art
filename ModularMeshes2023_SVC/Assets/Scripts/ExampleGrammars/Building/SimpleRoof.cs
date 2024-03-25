@@ -74,7 +74,7 @@ namespace Demo {
 				nextRoof.Generate(buildDelay);
 			} else { // continue with a stock
 				SimpleStock nextStock = CreateSymbol<SimpleStock>("stock");
-				nextStock.Initialize(newWidth, newDepth, wallStyle, roofStyle);
+				nextStock.Initialize(0, newWidth, newDepth, wallStyle, roofStyle);
 				nextStock.Generate(buildDelay);
 			}
 		}

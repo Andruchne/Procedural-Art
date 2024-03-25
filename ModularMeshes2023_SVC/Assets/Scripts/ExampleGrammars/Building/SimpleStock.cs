@@ -16,7 +16,10 @@ namespace Demo {
 		[SerializeField]
 		GameObject[] roofStyle;
 
-		public void Initialize(int Width, int Depth, GameObject[] wallStyle, GameObject[] roofStyle) {
+		int number;
+
+		public void Initialize(int number, int Width, int Depth, GameObject[] wallStyle, GameObject[] roofStyle) {
+			this.number = number;
 			this.Width=Width;
 			this.Depth=Depth;
 			this.wallStyle=wallStyle;
@@ -49,8 +52,9 @@ namespace Demo {
 			// Continue with a stock or with a roof (random choice):
 			float randomValue = RandomFloat();
 			if (randomValue < stockContinueChance) {
+				number++;
 				SimpleStock nextStock = CreateSymbol<SimpleStock>("stock", new Vector3(0, 1, 0));
-				nextStock.Initialize(Width, Depth, wallStyle, roofStyle);
+				nextStock.Initialize(number, Width, Depth, wallStyle, roofStyle);
 				nextStock.Generate(buildDelay);
 			} else {
 				SimpleRoof nextRoof = CreateSymbol<SimpleRoof>("roof", new Vector3(0, 1, 0));
