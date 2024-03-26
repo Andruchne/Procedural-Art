@@ -38,7 +38,7 @@ public class NormalRoof : Shape
     {
         SimpleRow flatRoof;
         
-        flatRoof = CreateSymbol<SimpleRow>("roofStrip", new Vector3(-Width / 2, 0, -0.5f), Quaternion.Euler(new Vector3(0, 90, 0)));
+        flatRoof = CreateSymbol<SimpleRow>("roofStrip", new Vector3(0, 0, -0.5f), Quaternion.Euler(new Vector3(0, 90, 0)));
         flatRoof.Initialize(Width, roofStyle);
         flatRoof.Generate();
         
