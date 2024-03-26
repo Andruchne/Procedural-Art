@@ -10,7 +10,6 @@ public class NormalRoof : Shape
     int Depth;
 
     GameObject[] roofStyle;
-    GameObject[] wallStyle;
 
     // (offset) values for the next layer:
     int newWidth;
@@ -32,14 +31,21 @@ public class NormalRoof : Shape
         newDepth = Depth;
 
         CreateFlatRoofPart();
-        CreateNextPart();
+        //CreateNextPart();
     }
 
     void CreateFlatRoofPart()
     {
+        SimpleRow flatRoof;
+        
+        flatRoof = CreateSymbol<SimpleRow>("roofStrip", new Vector3(-Width / 2, 0, -0.5f), Quaternion.Euler(new Vector3(0, 90, 0)));
+        flatRoof.Initialize(Width, roofStyle);
+        flatRoof.Generate();
+        
+
+        /*
         // Randomly create two roof strips in depth direction or in width direction:
         int side = RandomInt(2);
-        SimpleRow flatRoof;
 
         switch (side)
         {
@@ -64,13 +70,13 @@ public class NormalRoof : Shape
                 newDepth -= 2;
                 break;
         }
+        */
     }
 
     void CreateNextPart()
     {
         // randomly continue with a roof or a stock:
-        if (newWidth <= 0 || newDepth <= 0)
-            return;
+        if (newWidth <= 0 || newDepth <= 0) return;
 
         NormalRoof nextRoof = CreateSymbol<NormalRoof>("roof");
         nextRoof.Initialize(newWidth, newDepth, roofStyle);
