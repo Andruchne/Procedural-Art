@@ -55,9 +55,7 @@ public class NormalHouse : Shape
         {
             // Generate stone walls...
             GenerateWalls(stoneWalls);
-
-            number++;
-            GenerateFloor();
+            GenerateFloor(true);
         }
         else
         {
@@ -101,10 +99,14 @@ public class NormalHouse : Shape
         nextRoof.Generate(buildDelay);
     }
 
-    void GenerateFloor()
+    void GenerateFloor(bool increaseNumber = false)
     {
+        // To allow proper number tracking in editor time...
+        int n = number;
+        if (increaseNumber) n++;
+
         NormalHouse nextStock = CreateSymbol<NormalHouse>("stock", new Vector3(0, 1, 0));
-        nextStock.Initialize(number, Width, Depth, stoneBase, woodWalls, stoneWalls, roofStyle);
+        nextStock.Initialize(n, Width, Depth, stoneBase, woodWalls, stoneWalls, roofStyle);
         nextStock.Generate(buildDelay);
     }
 
