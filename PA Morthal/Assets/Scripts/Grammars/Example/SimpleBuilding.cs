@@ -49,5 +49,10 @@ namespace Demo {
 				GameObject newRoof = SpawnPrefab(ChooseRandom(roofPrefabs));
 			}
 		}
+
+        public override void ResetDefault()
+        {
+			buildingHeight = -1;
+        }
 	}
 }

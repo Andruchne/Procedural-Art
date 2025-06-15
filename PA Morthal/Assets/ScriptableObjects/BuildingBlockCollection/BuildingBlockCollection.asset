@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d90eff56823394698717ed2a5d0091, type: 3}
+  m_Name: BuildingBlockCollection
+  m_EditorClassIdentifier: 
+  stoneGround: {fileID: 8857120592319871694, guid: 96ce139e39d39ca4aad077f873f45479, type: 3}
+  stoneGroundPillar: {fileID: 8857120592319871694, guid: e8915839614fa9c43a1f791a59d71a95, type: 3}
+  stoneGroundFullPillar: {fileID: 550282755243231535, guid: 59287dcc6322b5a42b08bb17c09fb6bd, type: 3}
+  groundPlank: {fileID: 7612701901548769067, guid: 1dc1554b7f5ce9e4ca25b7df0d8b3068, type: 3}
+  groundPlankHalf: {fileID: 8344169045538576466, guid: 0431633e18b2ef14698e8034a0f45ebb, type: 3}
+  pillar: {fileID: 4591064239346654864, guid: 3f544df406cbfb54c9b2375a97ae4c66, type: 3}
+  thinPillar: {fileID: 1540054611671815895, guid: 4a82002176fca60408c1fef4e33d705a, type: 3}
+  stairs: {fileID: 7318777468607284159, guid: 560b7753ee8dc1347a342bb916e191c0, type: 3}
+  stoneStairs: {fileID: 294811868521765326, guid: 3d0440700f4093f47b4500c78b3a85bb, type: 3}
+  woodWall: {fileID: 1511045618726264458, guid: 99f0611ffa661e941b777107aaef429e, type: 3}
+  woodWallDoor: {fileID: 6850292210349603453, guid: 7c05328a6ca319f49bd8be1896d3bb09, type: 3}
+  woodWallCorner: {fileID: 9073310296432483728, guid: a24fdba52b3c0f74985e20373942a658, type: 3}
+  woodWallHalf: {fileID: 4941054893821743665, guid: 0e8a7d3176e703140ae99b6792bb107b, type: 3}
+  woodAltWall: {fileID: 4236536777610712162, guid: 0b0fceb40656e2f49b2f8d6a9fc09d21, type: 3}
+  stoneWall: {fileID: 5110154800280364048, guid: c56d8efc3483cd94d93c78e04c647865, type: 3}
+  stoneWallCorner: {fileID: 9127681269058849595, guid: 11cecc792c4964d4c8e084c31545c71a, type: 3}
+  stoneWallDoor: {fileID: 1033166845445165008, guid: f2ea5814c00c5ce4caae58254a89d444, type: 3}
+  highRoofLeft: {fileID: 1555932411724649136, guid: ca9006cfbe5ef6f4e8aec6333e9f69e6, type: 3}
+  highRoof: {fileID: 1527782446817293048, guid: 24b106e016f8c6a4cb234a579c955f1c, type: 3}
+  highRoofRight: {fileID: 1458143409595382759, guid: c101be52c5569da4e8a1cc89a75da3aa, type: 3}
+  highestRoofCenter: {fileID: 2069373653443148755, guid: 1da98d1745542bb42a8b6df66a0906e9, type: 3}
+  highRoofCenter: {fileID: 4587212365362701498, guid: 92752081e78684a459313f4fafc9779e, type: 3}
+  highRoofCenterPillar: {fileID: 5371347505969087124, guid: c3441c2a0a5befb4a9be3bd5ab93ed4a, type: 3}
+  darkRoofHigh: {fileID: 6591110430197307324, guid: a58d926b60b93dc4eb5228b55843cca2, type: 3}
+  darkRoofHighCenter: {fileID: 3878103475270957297, guid: a42b40c5b60132947bddf08939293c9b, type: 3}
+  flatRoofLeft: {fileID: 905594805021009273, guid: 571c8532a9edb8741b2a99353d82e164, type: 3}
+  flatRoof: {fileID: 1855067302553643525, guid: 18cda57a0dbdf1c478fc41fefbb00ec6, type: 3}
+  flatRoofRight: {fileID: 6780318538200937590, guid: 6496375267297854a84fee53f9149ca1, type: 3}
+  flatRoofInnerCorner: {fileID: 4808808454543301309, guid: 59f36ce31f9fd934db764e571b67d88f, type: 3}
+  flatRoofCorner: {fileID: 1217932983687333632, guid: be5f5ef9a1be9dd4a865fd137a293eb7, type: 3}
+  flatRoofPillar: {fileID: 1052599777522513663, guid: a29835ff542b69946ba2a63aa897010d, type: 3}
+  wideRoofLeft: {fileID: 1532529501468060786, guid: 125cf8a461431994cb2a26fb80f736de, type: 3}
+  wideRoof: {fileID: 7677330566394255134, guid: 73f2c84b25db44440b6d175d322ac32d, type: 3}
+  wideRoofRight: {fileID: 8825480616462171656, guid: 14502d901b453f14ab9d27355fa5f382, type: 3}
+  treeTrunkPile: {fileID: 3372538324972234680, guid: 784866923a025214f93b613ef64c88a1, type: 3}
+  trunkHolder: {fileID: 7418557734276939859, guid: a29c03efd90c107498523b1b512df00b, type: 3}
+  watermill: {fileID: 9101840761491093876, guid: 01d59ca65f34da54cb8d332251a42c86, type: 3}

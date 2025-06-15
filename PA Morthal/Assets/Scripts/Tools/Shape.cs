@@ -3,9 +3,11 @@
 //   (1) localScale=(1,1,1) to work correctly with scaled roots,
 //   (2) buildDelay included and passed here, though used only in subclasses
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 
 namespace Demo {
@@ -101,12 +103,12 @@ namespace Demo {
 		/// Uses The RandomGenerator attached to the root object, if that's there.
 		/// If you extend the RandomGenerator class, you can get seeded pseudo random numbers this way.
 		/// </summary>
-		protected int RandomInt(int maxValue) {
+		protected int RandomInt(int minValue, int maxValue) {
 			RandomGenerator rnd = Root.GetComponent<RandomGenerator>();
 			if (rnd!=null) {
-				return rnd.Next(maxValue);
+				return rnd.Next(minValue, maxValue);
 			} else { // use Unity's random
-				return Random.Range(0, maxValue);
+				return Random.Range(minValue, maxValue);
 			}
 		}
 
@@ -130,7 +132,7 @@ namespace Demo {
 		/// If you extend the RandomGenerator class, you can get seeded pseudo random numbers this way.
 		/// </summary>
 		public T SelectRandom<T>(T[] objectArray) {
-			return objectArray[RandomInt(objectArray.Length)];
+			return objectArray[RandomInt(0, objectArray.Length)];
 		}
 
 		/// <summary>
@@ -183,13 +185,27 @@ namespace Demo {
 			generatedObjects.Clear();
 		}
 
-		/// <summary>
-		/// This method must be implemented in subclasses (=your own grammar symbols).
-		/// This is where you apply grammar rules (possibly randomly selected).
-		/// Typically, from this method you'll call 
-		///   CreateSymbol to create new non-terminal symbols (=game objects with shape components), and
-		///   SpawnPrefab to create terminal symbols (=game objects)
-		/// </summary>
-		protected abstract void Execute();		
+        /// <summary>
+        /// Get a random enum value
+        /// Works with any enum type
+        /// </summary>
+        public T GetRandomEnumValue<T>() where T : Enum
+        {
+            // Get all the values from the enum
+            Array enumValues = Enum.GetValues(typeof(T));
+            int randomIndex = UnityEngine.Random.Range(0, enumValues.Length);
+            // Cast the value back to the enum type
+            return (T)enumValues.GetValue(randomIndex);
+        }
+
+        /// <summary>
+        /// This method must be implemented in subclasses (=your own grammar symbols).
+        /// This is where you apply grammar rules (possibly randomly selected).
+        /// Typically, from this method you'll call 
+        ///   CreateSymbol to create new non-terminal symbols (=game objects with shape components), and
+        ///   SpawnPrefab to create terminal symbols (=game objects)
+        /// </summary>
+        protected abstract void Execute();
+		public abstract void ResetDefault();
 	}
 }

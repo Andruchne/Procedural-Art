@@ -12,7 +12,6 @@ using UnityEngine;
 ///  (Possibly: use a "random" seed whenever seed=0.)
 /// </summary>
 public class RandomGenerator : MonoBehaviour {
-	public int seed;
 	public int currentSeed;
 
 	[SerializeField] static System.Random rand = null;
@@ -20,8 +19,8 @@ public class RandomGenerator : MonoBehaviour {
     /// <summary>
     /// Returns a random integer between 0 and maxValue-1 (inclusive).
     /// </summary>
-    public int Next(int maxValue) {
-		return Rand.Next(maxValue);
+    public int Next(int minValue, int maxValue) {
+		return Rand.Next(minValue, maxValue);
 	}
 
 	public System.Random Rand {
@@ -35,8 +34,7 @@ public class RandomGenerator : MonoBehaviour {
 
 	public void ResetRandom() {
 		// Either generate random seed, or take given seed
-		if (seed == 0) { currentSeed = UnityEngine.Random.Range(0, int.MaxValue); }
-		else { currentSeed = seed; }
+		if (currentSeed == 0) { currentSeed = UnityEngine.Random.Range(0, int.MaxValue); }
 
 		rand = new System.Random(currentSeed);
 	}

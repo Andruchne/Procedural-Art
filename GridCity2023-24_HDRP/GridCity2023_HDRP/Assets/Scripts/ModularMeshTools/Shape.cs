@@ -3,6 +3,7 @@
 //   (1) localScale=(1,1,1) to work correctly with scaled roots,
 //   (2) buildDelay included and passed here, though used only in subclasses
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -183,13 +184,13 @@ namespace Demo {
 			generatedObjects.Clear();
 		}
 
-		/// <summary>
-		/// This method must be implemented in subclasses (=your own grammar symbols).
-		/// This is where you apply grammar rules (possibly randomly selected).
-		/// Typically, from this method you'll call 
-		///   CreateSymbol to create new non-terminal symbols (=game objects with shape components), and
-		///   SpawnPrefab to create terminal symbols (=game objects)
-		/// </summary>
-		protected abstract void Execute();		
+        /// <summary>
+        /// This method must be implemented in subclasses (=your own grammar symbols).
+        /// This is where you apply grammar rules (possibly randomly selected).
+        /// Typically, from this method you'll call 
+        ///   CreateSymbol to create new non-terminal symbols (=game objects with shape components), and
+        ///   SpawnPrefab to create terminal symbols (=game objects)
+        /// </summary>
+        protected abstract void Execute();		
 	}
 }

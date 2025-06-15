@@ -13,31 +13,46 @@ public class PillarBlock : MonoBehaviour
     [SerializeField] GameObject smallLeftPillar;
     [SerializeField] GameObject smallRightPillar;
 
-    [SerializeField] GameObject fence;
-    [SerializeField] GameObject rope;
+    [SerializeField] GameObject plankFence;
+    [SerializeField] GameObject ropeFence;
 
-    // We only need to keep track of the current left pillar, to avoid duplicates with neighbouring pillars
-    GameObject currentLeftPillar;
     GameObject currentFence;
+
+    bool leftIsSmall;
+    bool rightIsSmall;
 
     private void Start()
     {
-        SetPillarType(false, false);
+        CheckState();
     }
 
-    public void SetFence(bool state, bool isFence)
+    public bool IsLeftPillarSmall()
+    {
+        return leftIsSmall;
+    }
+
+    public bool IsRightPillarSmall()
+    {
+        return rightIsSmall;
+    }
+
+    // Determines, whether the fence is supposed to be with ropes or wooden planks.
+    // Deactivates current fence, if parameter state is false
+    public void SetFence(bool state, bool isPlank = true)
     {
         if (state)
         {
-            if (isFence)
+            if (currentFence != null) currentFence.SetActive(false);
+
+            if (isPlank)
             {
-                fence.SetActive(true);
-                currentFence = fence;
+                plankFence.SetActive(true);
+                currentFence = plankFence;
             }
             else
             {
-                rope.SetActive(true);
-                currentFence = rope;
+                ropeFence.SetActive(true);
+                currentFence = ropeFence;
             }
         }
         else if (currentFence != null)
@@ -47,26 +62,43 @@ public class PillarBlock : MonoBehaviour
         }
     }
 
-    public void DeactivateLeftPillar()
-    {
-        currentLeftPillar.SetActive(false);
-    }
-
+    // Determines, whether the pillar is supposed to be small or big
     public void SetPillarType(bool leftIsSmall, bool rightIsSmall)
     {
-        if (leftIsSmall) 
+        this.leftIsSmall = leftIsSmall;
+        this.rightIsSmall = rightIsSmall;
+
+        if (leftIsSmall)
         {
             SetState(true, true);
-            currentLeftPillar = smallLeftPillar;
         }
-        else 
+        else
         {
             SetState(true, false);
-            currentLeftPillar = bigLeftPillar;
         }
 
-        if (rightIsSmall) { SetState(false, true); }
-        else { SetState(false, false); }
+        if (rightIsSmall) 
+        { 
+            SetState(false, true);
+        }
+        else 
+        { 
+            SetState(false, false);
+        }
+    }
+
+    // When two neighbouring fences are instantiated, pillars overlap.
+    // To avoid unnecessary active gameobjects in the scene, we deactivate the neihbouring left pillar, of the newly instantiated one.
+    public void DeactivateLeftPillar()
+    {
+        bigLeftPillar.SetActive(false);
+        smallLeftPillar.SetActive(false);
+    }
+
+    public void DeactivateRightPillar()
+    {
+        bigRightPillar.SetActive(false);
+        smallRightPillar.SetActive(false);
     }
 
     private void SetState(bool left, bool activateSmall)
@@ -81,5 +113,20 @@ public class PillarBlock : MonoBehaviour
             smallRightPillar.SetActive(activateSmall);
             bigRightPillar.SetActive(!activateSmall);
         }
+    }
+
+    private void CheckState()
+    {
+        // Check pillar state
+        if (bigLeftPillar.activeSelf) { leftIsSmall = false; }
+        else { leftIsSmall = true; }
+
+        if (bigRightPillar.activeSelf) { rightIsSmall = false; }
+        else { rightIsSmall = true; }
+
+        // Check fence state
+        if (plankFence.activeSelf) { currentFence = plankFence; }
+        else if (ropeFence.activeSelf) { currentFence = ropeFence; }
+        else { currentFence = null; }
     }
 }
