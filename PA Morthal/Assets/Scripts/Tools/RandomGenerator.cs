@@ -23,7 +23,15 @@ public class RandomGenerator : MonoBehaviour {
 		return Rand.Next(minValue, maxValue);
 	}
 
-	public System.Random Rand {
+    /// <summary>
+    /// Returns a random float between min (inclusive) and max (inclusive).
+    /// </summary>
+    public float NextFloat(float min, float max)
+    {
+        return (float)(Rand.NextDouble() * (max - min) + min);
+    }
+
+    public System.Random Rand {
 		get {
 			if (rand==null) {
 				ResetRandom();
@@ -35,7 +43,6 @@ public class RandomGenerator : MonoBehaviour {
 	public void ResetRandom() {
 		// Either generate random seed, or take given seed
 		if (currentSeed == 0) { currentSeed = UnityEngine.Random.Range(0, int.MaxValue); }
-
 		rand = new System.Random(currentSeed);
 	}
 }

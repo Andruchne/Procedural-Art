@@ -52,6 +52,8 @@ namespace Demo {
 		}
 		GameObject root = null;
 
+		float currentYOffset = 0.0f;
+
 		/// <summary>
 		/// A utility method for creating new grammar symbols, or in Unity terms: (child) game objects with a 
 		///  Shape component.		
@@ -113,16 +115,16 @@ namespace Demo {
 		}
 
 		/// <summary>
-		/// Returns a random float between 0 and 1. 
+		/// Return a random float between minValue and maxValue inclusive
 		/// Uses The RandomGenerator attached to the root object, if that's there.
 		/// If you extend the RandomGenerator class, you can get seeded pseudo random numbers this way.
 		/// </summary>
-		protected float RandomFloat() {
+		protected float RandomFloat(float minValue, float maxValue) {
 			RandomGenerator rnd = Root.GetComponent<RandomGenerator>();
 			if (rnd!=null) {
-				return (float)(rnd.Rand.NextDouble());
+				return (float)rnd.NextFloat(minValue, maxValue);
 			} else { // use Unity's random
-				return Random.value;
+				return Random.value * (maxValue - minValue) + minValue;
 			}
 		}
 				
@@ -199,6 +201,21 @@ namespace Demo {
         }
 
         /// <summary>
+        /// Submerges the shape by a random value between min and max
+        /// </summary>
+        public void Submerge(float min, float max)
+		{
+			float randomValue = RandomFloat(min, max);
+			Shape rootShape = Root.GetComponent<Shape>();
+
+            if (Root != null)
+			{
+                rootShape.currentYOffset = randomValue;
+				Root.transform.position = new Vector3(Root.transform.position.x, Root.transform.position.y - rootShape.currentYOffset, Root.transform.position.z);
+			}
+		}
+
+        /// <summary>
         /// This method must be implemented in subclasses (=your own grammar symbols).
         /// This is where you apply grammar rules (possibly randomly selected).
         /// Typically, from this method you'll call 
@@ -207,5 +224,16 @@ namespace Demo {
         /// </summary>
         protected abstract void Execute();
 		public abstract void ResetDefault();
+
+		public void ResetYOffset()
+		{
+            Shape rootShape = Root.GetComponent<Shape>();
+
+            if (rootShape.currentYOffset != 0)
+            {
+                Root.transform.position = new Vector3(Root.transform.position.x, Root.transform.position.y + rootShape.currentYOffset, Root.transform.position.z);
+                rootShape.currentYOffset = 0;
+            }
+        }
 	}
 }

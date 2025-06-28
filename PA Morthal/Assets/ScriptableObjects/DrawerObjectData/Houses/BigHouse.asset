@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fafe81c5b939ff144884b61a73f1b2d9, type: 3}
+  m_Name: BigHouse
+  m_EditorClassIdentifier: 
+  spawnPrefab: {fileID: 514103782935964488, guid: c7ec5bc0670974d43b34315a97133286, type: 3}
+  previewPrefab: {fileID: 237210120464404929, guid: 2b455975a729fcc46bdb806ee2deca2d, type: 3}
+  previewImage: {fileID: 2800000, guid: df8ceec3a63f7e74eb6ebfb2b3f8c12d, type: 3}

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5572b7f1cb4aa3d4d9965a0548ad881d, type: 3}
+  m_Name: VillageBuildingData
+  m_EditorClassIdentifier: 
+  bigHouse: {fileID: 514103782935964488, guid: c7ec5bc0670974d43b34315a97133286, type: 3}
+  middleLargeHouse: {fileID: 8621391943516540899, guid: c1f9d697e26e67743a8bae8a083d3c91, type: 3}
+  simpleHouse: {fileID: 5104607404468934076, guid: d5eaee9f46a0be540829a953c1fc16cf, type: 3}
+  twoStoryShoreHouse: {fileID: 226380498239857688, guid: 94023857001e50c4b9a62c41d53bee38, type: 3}

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fafe81c5b939ff144884b61a73f1b2d9, type: 3}
+  m_Name: SawMill
+  m_EditorClassIdentifier: 
+  spawnPrefab: {fileID: 5147461200378878869, guid: 5b90edbdba280c64e9121fb3c382e8e6, type: 3}
+  previewPrefab: {fileID: 5497329428635522798, guid: f7505bdfeb98b484fb9324827545899d, type: 3}
+  previewImage: {fileID: 2800000, guid: 979591dc6bcb04b43aa75f0ebebd64c8, type: 3}

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fafe81c5b939ff144884b61a73f1b2d9, type: 3}
+  m_Name: MiddleLargeHouse
+  m_EditorClassIdentifier: 
+  spawnPrefab: {fileID: 8621391943516540899, guid: c1f9d697e26e67743a8bae8a083d3c91, type: 3}
+  previewPrefab: {fileID: 2274447616836043299, guid: 3b766b6412955314ebafc0122324066b, type: 3}
+  previewImage: {fileID: 2800000, guid: f3aed8c31a8e76a499563abc40164bd3, type: 3}

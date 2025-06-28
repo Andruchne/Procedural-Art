@@ -15,6 +15,7 @@ MonoBehaviour:
   stoneGround: {fileID: 8857120592319871694, guid: 96ce139e39d39ca4aad077f873f45479, type: 3}
   stoneGroundPillar: {fileID: 8857120592319871694, guid: e8915839614fa9c43a1f791a59d71a95, type: 3}
   stoneGroundFullPillar: {fileID: 550282755243231535, guid: 59287dcc6322b5a42b08bb17c09fb6bd, type: 3}
+  unsnowedGroundPlank: {fileID: 7612701901548769067, guid: 876d153ff39924144a04276fd7f9cec6, type: 3}
   groundPlank: {fileID: 7612701901548769067, guid: 1dc1554b7f5ce9e4ca25b7df0d8b3068, type: 3}
   groundPlankHalf: {fileID: 8344169045538576466, guid: 0431633e18b2ef14698e8034a0f45ebb, type: 3}
   pillar: {fileID: 4591064239346654864, guid: 3f544df406cbfb54c9b2375a97ae4c66, type: 3}
@@ -48,4 +49,9 @@ MonoBehaviour:
   wideRoofRight: {fileID: 8825480616462171656, guid: 14502d901b453f14ab9d27355fa5f382, type: 3}
   treeTrunkPile: {fileID: 3372538324972234680, guid: 784866923a025214f93b613ef64c88a1, type: 3}
   trunkHolder: {fileID: 7418557734276939859, guid: a29c03efd90c107498523b1b512df00b, type: 3}
-  watermill: {fileID: 9101840761491093876, guid: 01d59ca65f34da54cb8d332251a42c86, type: 3}
+  watermill: {fileID: 340037361088170840, guid: aead1034b60538d4fb191e383e4a69c2, type: 3}
+  branch1: {fileID: 5565539962396416092, guid: 7e974d57fb8e2c14a93eb515a5c2872b, type: 3}
+  branch2: {fileID: 8326552414551411468, guid: 5bdc0fb0acb824846b930d0a7c22f21c, type: 3}
+  branch3: {fileID: 1262052541138143889, guid: b0b6a86ed5ca7ba4597e9a6c045c5a6c, type: 3}
+  treeTrunk: {fileID: 3730318776005508998, guid: d7082d33a5d444e40b296a0bcb85680f, type: 3}
+  treeTop: {fileID: 3993945496026355686, guid: fefd6eaa8ec78d74ebbb0c5c49ee65f4, type: 3}

@@ -9,6 +9,7 @@ public class BuildingBlockCollection : ScriptableObject
     public GameObject stoneGroundFullPillar;
 
     // Planks
+    public GameObject unsnowedGroundPlank;
     public GameObject groundPlank;
     public GameObject groundPlankHalf;
 
@@ -57,4 +58,12 @@ public class BuildingBlockCollection : ScriptableObject
     public GameObject treeTrunkPile;
     public GameObject trunkHolder;
     public GameObject watermill;
+
+    // Tree
+    public GameObject branch1;
+    public GameObject branch2;
+    public GameObject branch3;
+
+    public GameObject treeTrunk;
+    public GameObject treeTop;
 }

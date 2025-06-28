@@ -55,11 +55,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: e8aa04212d3fb0740a0d7c7e711f4ff8, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 63bc25d76a83f1a49a73e4a721e357dd, type: 2}
+      objectReference: {fileID: 2100000, guid: a5ee5ec66339bff47b3cb0228a4cd755, type: 2}
     - target: {fileID: -7511558181221131132, guid: e8aa04212d3fb0740a0d7c7e711f4ff8, type: 3}
       propertyPath: 'm_Materials.Array.data[2]'
       value: 
-      objectReference: {fileID: 2100000, guid: 63bc25d76a83f1a49a73e4a721e357dd, type: 2}
+      objectReference: {fileID: 2100000, guid: a5ee5ec66339bff47b3cb0228a4cd755, type: 2}
     - target: {fileID: 919132149155446097, guid: e8aa04212d3fb0740a0d7c7e711f4ff8, type: 3}
       propertyPath: m_Name
       value: RoofFlatCorner
@@ -67,30 +67,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e8aa04212d3fb0740a0d7c7e711f4ff8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8317934344915453843}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8aa04212d3fb0740a0d7c7e711f4ff8, type: 3}
---- !u!1 &1217932983687333632 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e8aa04212d3fb0740a0d7c7e711f4ff8, type: 3}
-  m_PrefabInstance: {fileID: 2028764195149281873}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8317934344915453843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217932983687333632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f99f0a611e85099459ed5806781aaabd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tiling: {x: 0.025, y: 0.025}
-  usedMaterials:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

@@ -55,11 +55,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 32561707c0b43324ba35438f526ee575, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 63bc25d76a83f1a49a73e4a721e357dd, type: 2}
+      objectReference: {fileID: 2100000, guid: a5ee5ec66339bff47b3cb0228a4cd755, type: 2}
     - target: {fileID: -7511558181221131132, guid: 32561707c0b43324ba35438f526ee575, type: 3}
       propertyPath: 'm_Materials.Array.data[2]'
       value: 
-      objectReference: {fileID: 2100000, guid: 63bc25d76a83f1a49a73e4a721e357dd, type: 2}
+      objectReference: {fileID: 2100000, guid: a5ee5ec66339bff47b3cb0228a4cd755, type: 2}
     - target: {fileID: 919132149155446097, guid: 32561707c0b43324ba35438f526ee575, type: 3}
       propertyPath: m_Name
       value: RoofFlatInnerCorner

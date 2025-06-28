@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 96a69d29489be15449203e22de60298e, type: 2}
+  - {fileID: 2100000, guid: 7cbdc3cb3ce3fe24fa7f14447e1e161d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -161,7 +161,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 1c5a6c43559c7dd469a636de5e904bc1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: fde7170833d4c9048a065dfb92934db0, type: 2}
+      objectReference: {fileID: 2100000, guid: 4400e7e8f6306124bab59591d886b675, type: 2}
     - target: {fileID: -7511558181221131132, guid: 1c5a6c43559c7dd469a636de5e904bc1, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -169,11 +169,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 1c5a6c43559c7dd469a636de5e904bc1, type: 3}
       propertyPath: 'm_Materials.Array.data[2]'
       value: 
-      objectReference: {fileID: 2100000, guid: 63bc25d76a83f1a49a73e4a721e357dd, type: 2}
+      objectReference: {fileID: 2100000, guid: a5ee5ec66339bff47b3cb0228a4cd755, type: 2}
     - target: {fileID: -7511558181221131132, guid: 1c5a6c43559c7dd469a636de5e904bc1, type: 3}
       propertyPath: 'm_Materials.Array.data[3]'
       value: 
-      objectReference: {fileID: 2100000, guid: 63bc25d76a83f1a49a73e4a721e357dd, type: 2}
+      objectReference: {fileID: 2100000, guid: a5ee5ec66339bff47b3cb0228a4cd755, type: 2}
     - target: {fileID: 919132149155446097, guid: 1c5a6c43559c7dd469a636de5e904bc1, type: 3}
       propertyPath: m_Name
       value: RoofFlatRight
@@ -185,9 +185,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8858869822776879700}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1c5a6c43559c7dd469a636de5e904bc1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8853412290678157786}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1c5a6c43559c7dd469a636de5e904bc1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5159554725984740785}
@@ -202,24 +199,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1c5a6c43559c7dd469a636de5e904bc1, type: 3}
   m_PrefabInstance: {fileID: 5970064570209487143}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8853412290678157786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6780318538200937590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f99f0a611e85099459ed5806781aaabd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tiling: {x: 0.025, y: 0.025}
-  usedMaterials:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &5159554725984740785
 MonoBehaviour:
   m_ObjectHideFlags: 0

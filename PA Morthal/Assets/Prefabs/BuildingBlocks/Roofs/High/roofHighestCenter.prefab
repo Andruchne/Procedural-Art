@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 96a69d29489be15449203e22de60298e, type: 2}
+  - {fileID: 2100000, guid: 7cbdc3cb3ce3fe24fa7f14447e1e161d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -169,7 +169,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 2acf4cb02ddb4b44c9d340629598a0ab, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 63bc25d76a83f1a49a73e4a721e357dd, type: 2}
+      objectReference: {fileID: 2100000, guid: a5ee5ec66339bff47b3cb0228a4cd755, type: 2}
     - target: {fileID: -7511558181221131132, guid: 2acf4cb02ddb4b44c9d340629598a0ab, type: 3}
       propertyPath: 'm_Materials.Array.data[2]'
       value: 
@@ -177,7 +177,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 2acf4cb02ddb4b44c9d340629598a0ab, type: 3}
       propertyPath: 'm_Materials.Array.data[3]'
       value: 
-      objectReference: {fileID: 2100000, guid: 63bc25d76a83f1a49a73e4a721e357dd, type: 2}
+      objectReference: {fileID: 2100000, guid: a5ee5ec66339bff47b3cb0228a4cd755, type: 2}
     - target: {fileID: 919132149155446097, guid: 2acf4cb02ddb4b44c9d340629598a0ab, type: 3}
       propertyPath: m_Name
       value: roofHighestCenter

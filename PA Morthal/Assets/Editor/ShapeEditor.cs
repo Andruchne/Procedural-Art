@@ -12,6 +12,7 @@ namespace Demo {
 
 			GUILayout.Label("Generated objects: "+targetShape.NumberOfGeneratedObjects);
 			if (GUILayout.Button("Generate")) {
+				targetShape.ResetYOffset();
 				targetShape.Generate(0.1f);
 			}
 			if (GUILayout.Button("Clear")) {
@@ -23,6 +24,7 @@ namespace Demo {
                         DestroyImmediate(targetShape.transform.GetChild(i).gameObject);
                     }
                 }
+				targetShape.ResetYOffset();
 				targetShape.ResetDefault();
             }
 			DrawDefaultInspector();

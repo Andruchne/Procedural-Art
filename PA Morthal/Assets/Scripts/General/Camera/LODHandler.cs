@@ -34,12 +34,15 @@ public class LODHandler : MonoBehaviour
         LODObjects.Add(pObject);
     }
 
+    public void RemoveLODObject(LODReplacer pObject)
+    {
+        LODObjects.Remove(pObject);
+    }
+
     private void CheckObjects()
     {
         foreach(LODReplacer obj in LODObjects)
         {
-            //print((obj.transform.position - transform.position).magnitude);
-
             if (obj == null) 
             { 
                 removeList.Add(obj);
@@ -65,5 +68,19 @@ public class LODHandler : MonoBehaviour
             }
             removeList.Clear();
         }
+    }
+
+    public bool CheckState(Vector3 checkPos)
+    {
+        if ((checkPos - transform.position).magnitude > distanceToTrigger)
+        {
+            return false;
+        }
+        else if ((checkPos - transform.position).magnitude <= distanceToTrigger)
+        {
+            return true;
+        }
+
+        return false;
     }
 }
